@@ -8,10 +8,14 @@ class Anagram
     end
 
     def match(array)
+        new_arr = []
         # use filter/select to return matching anagrams
-        array.filter do |test| 
-            test.chars.sort == @word.chars.sort            
+        array.map do |test| 
+            if test.chars.sort == @word.chars.sort
+                new_arr.push(test)   
+            end        
         end
+        new_arr
     end  
 
 

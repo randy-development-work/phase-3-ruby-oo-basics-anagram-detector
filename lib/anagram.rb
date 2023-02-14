@@ -11,9 +11,8 @@ class Anagram
         new_arr = []
         # use filter/select to return matching anagrams
         array.map do |test| 
-            if test.chars.sort == @word.chars.sort
-                new_arr.push(test)   
-            end        
+            test.chars.sort == @word.chars.sort ? new_arr.push(test) : nil               
+                    
         end
         new_arr
     end  
